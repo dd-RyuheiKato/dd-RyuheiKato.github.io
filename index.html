@@ -15,9 +15,9 @@
         trackInteractions: true,
         defaultPrivacyLevel: 'mask-user-input'
     }); 
-    document.addEventListener("click", function handler() {
+    document.addEventListener("onclick", function handler() {
         //Remove the event listener so that it only triggers once
-        document.removeEventListener("click", handler);
+        document.removeEventListener("onclick", handler);
         DD_RUM.addTiming('first_click');
     });
 
