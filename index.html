@@ -15,6 +15,11 @@
         trackInteractions: true,
         defaultPrivacyLevel: 'mask-user-input'
     }); 
+    document.addEventListener("click", function handler() {
+        //Remove the event listener so that it only triggers once
+        document.removeEventListener("click", handler);
+        DD_RUM.addTiming('first_click');
+    });
 
     window.DD_RUM &&
     window.DD_RUM.startSessionReplayRecording();
